@@ -1,23 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { LogoStrip } from "@/components/site/LogoStrip";
 import editorialFounder from "@/assets/editorial-founder.jpg";
 import editorialWatch from "@/assets/editorial-watch.jpg";
 
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About — Meridian & Co." },
-      { name: "description", content: "Three decades at the intersection of elite sport, entertainment, and finance." },
-      { property: "og:title", content: "About — Meridian & Co." },
-      { property: "og:description", content: "We understand your unique career, and serve it with excellence." },
-    ],
-  }),
-  component: AboutPage,
-});
-
-function AboutPage() {
+export default function AboutPage() {
   return (
     <div className="bg-paper text-ink">
       <section className="relative bg-ink text-paper">
@@ -48,23 +36,11 @@ function AboutPage() {
                 <span className="font-serif-italic font-normal">finance.</span>
               </h2>
               <div className="mt-10 space-y-6 leading-relaxed text-ink/80">
-                <p>
-                  For over 30 years, our founder has worked closely with some of the world's top
-                  high-profile athletes through various notable global organisations.
-                </p>
-                <p>
-                  The unique careers of pro athletes, professionals in entertainment, and entrepreneurs
-                  around the world demand a full focus on "the now," but often at a cost.
-                </p>
-                <p>
-                  A common blind spot is a lack of planning for their unique financial future, and the
-                  various ripple effects that follow. The firm was built to bridge that specific gap,
-                  helping you secure long-term financial independence and a future with meaning.
-                </p>
+                <p>For over 30 years, our founder has worked closely with some of the world's top high-profile athletes through various notable global organisations.</p>
+                <p>The unique careers of pro athletes, professionals in entertainment, and entrepreneurs around the world demand a full focus on "the now," but often at a cost.</p>
+                <p>A common blind spot is a lack of planning for their unique financial future, and the various ripple effects that follow. The firm was built to bridge that specific gap, helping you secure long-term financial independence and a future with meaning.</p>
                 <p className="border-l-2 border-flame pl-5 font-serif-italic text-xl text-ink">
-                  Serving as Founder, providing advisory for post-career and legacy planning, lifestyle,
-                  and philanthropy. Also a licensed representative of the regulated partner firm — the
-                  sole provider of all regulated wealth management services.
+                  Serving as Founder, providing advisory for post-career and legacy planning, lifestyle, and philanthropy. Also a licensed representative of the regulated partner firm — the sole provider of all regulated wealth management services.
                 </p>
               </div>
             </div>
@@ -72,9 +48,7 @@ function AboutPage() {
 
           <div className="mt-24 border-t border-ink/10 pt-10">
             <p className="eyebrow text-ink/60">Notable organisations</p>
-            <div className="mt-6">
-              <LogoStrip tone="light" />
-            </div>
+            <div className="mt-6"><LogoStrip tone="light" /></div>
           </div>
         </div>
       </section>
@@ -87,9 +61,7 @@ function AboutPage() {
               <span className="font-serif-italic font-normal">serves.</span>
             </h2>
             <p className="mt-8 max-w-xl text-ink/80">
-              Our team has stood backstage, in locker rooms, and at term sheets. The result is
-              advisory that listens before it advises — and structures wealth around the life you
-              actually intend to live.
+              Our team has stood backstage, in locker rooms, and at term sheets. The result is advisory that listens before it advises — and structures wealth around the life you actually intend to live.
             </p>
             <Link to="/services" className="mt-12 inline-flex items-center gap-3 border-b border-ink pb-1 text-sm font-medium uppercase tracking-eyebrow">
               See the Practice <span className="text-flame">→</span>
