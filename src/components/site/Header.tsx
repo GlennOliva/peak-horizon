@@ -1,6 +1,7 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 
 export function Header() {
+  const linkBase = "hover:text-flame transition-colors";
   return (
     <header className="absolute inset-x-0 top-0 z-40">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-6 md:px-10 md:py-8">
@@ -9,9 +10,9 @@ export function Header() {
           <span className="text-sm font-semibold tracking-display">MERIDIAN&nbsp;&amp;&nbsp;CO.</span>
         </Link>
         <nav className="hidden items-center gap-10 text-sm font-medium md:flex">
-          <Link to="/" activeOptions={{ exact: true }} activeProps={{ className: "text-flame" }} className="hover:text-flame transition-colors">Home</Link>
-          <Link to="/services" activeProps={{ className: "text-flame" }} className="hover:text-flame transition-colors">Services</Link>
-          <Link to="/about" activeProps={{ className: "text-flame" }} className="hover:text-flame transition-colors">About</Link>
+          <Link to="/" className={linkBase}>Home</Link>
+          <Link to="/services" className={linkBase}>Services</Link>
+          <Link to="/about" className={linkBase}>About</Link>
         </nav>
         <Link
           to="/"
