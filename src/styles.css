@@ -152,6 +152,3 @@
             mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
   }
 }
-
-/* Editorial serif via Google Fonts (Instrument Serif) */
-@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap");
